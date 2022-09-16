@@ -19,7 +19,7 @@ class StdinEvaluator(EvaluatorBase):
         else:
             raise Exception()
     
-    def _guess(self, previous_state):
+    def _guess(self, round, previous_state):
         if previous_state:
             print("Prevoius round results: %s" % "".join(map(self.__colored_guess, zip(self.__previous_guess, previous_state))))
         else:
